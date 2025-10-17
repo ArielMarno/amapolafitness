@@ -1,0 +1,193 @@
+/*contenedor del componente*/
+.entrenamientos{
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 5rem;
+    padding-top: 5rem;
+}
+
+/*contenedor principal*/
+.entrenamientos .main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+/*contenedor de titulo y subtitulo*/
+.entrenamientos .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+/*nombre de la sección*/
+.entrenamientos .content h5{
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 450;
+    color: var(--gris);
+    border: 1px solid var(--gris);
+    border-radius: 45px;
+    padding: 0.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*titulo*/
+.entrenamientos .content h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, 0.2821rem + 2.6816vw, 3.5rem);
+    font-weight: 500;
+    text-align: left;
+    max-width: 1300px;
+}
+
+/*subtitulo*/
+.entrenamientos .content h4{
+    font-family: var(--text);
+    font-size: clamp(1.2rem, 0.8564rem + 0.5363vw, 1.5rem);
+    font-weight: 500;
+    max-width: 1200px;
+    text-align: left;
+}
+
+/*contenedor de tarjetas entrenamientos*/
+.entrenamientos .grilla{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/*entrenamiento*/
+.entrenamientos .grilla .services{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--blanco);
+    border-radius: 25px;
+}
+
+/*contenedor imagen*/
+.entrenamientos .grilla .image{
+    width: 100%;
+    min-height: 400px;
+}
+
+/*imagen tipo de entrenamiento*/
+.entrenamientos .grilla .services img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/*nombre del entrenamiento*/
+.entrenamientos .services h3{
+    font-family: var(--text);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/*contendor de información y cta*/
+.entrenamientos .info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/*descripción*/
+.entrenamientos .info p{
+    font-family: var(--text);
+    font-size: 1.1rem;
+    max-width: 550px;
+}
+
+/*botón cta*/
+.entrenamientos .info a{
+    text-decoration: none;
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 1.1rem + 0vw, 1.1rem);
+    font-weight: 550;
+    color: var(--azul);
+}
+
+
+/*diseño adaptable a dispositivos moviles*/
+@media (max-width: 1440px){
+
+    .entrenamientos{
+        padding: 3rem;
+        padding-top: 5rem;
+    }
+
+    .entrenamientos .info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .entrenamientos .grilla .services{
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .entrenamientos{
+        padding: 2rem;
+        padding-top: 5rem;
+    }
+
+    .entrenamientos .grilla{
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(4, 1fe);
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .entrenamientos{
+        padding: 1rem;
+        padding-top: 5rem;
+    }
+
+    .entrenamientos .content h5{
+        font-size: 1.1rem;
+    }
+
+   .entrenamientos .services h3{
+        font-weight: 500;
+    }
+
+    .entrenamientos .services a{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}

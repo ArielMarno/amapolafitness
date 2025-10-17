@@ -1,0 +1,272 @@
+/*contendor del componente*/
+.quiensoy{
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+/*nombre de la sección*/
+.quiensoy h5{
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 450;
+    color: var(--gris);
+    border: 1px solid var(--gris);
+    border-radius: 45px;
+    padding: 0.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*contenedor de titulo y subtitulo*/
+.quiensoy .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.quiensoy .content h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, 0.2821rem + 2.6816vw, 3.5rem);
+    font-weight: 500;
+    text-align: center;
+    max-width: 1300px;
+}
+
+.quiensoy .content h4{
+    font-family: var(--text);
+    font-size: clamp(1.2rem, 0.8564rem + 0.5363vw, 1.5rem);
+    font-weight: 500;
+    max-width: 800px;
+    text-align: center;
+}
+
+/*subtitulo para testimonios*/
+.quiensoy h3{
+    font-family: var(--title);
+    font-size: clamp(1.5rem, 0.3547rem + 1.7877vw, 2.5rem);
+    font-weight: 500;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 5rem;
+}
+
+/*contenedor testimonios*/
+.slider{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    touch-action: pan-y;
+}
+
+/*contenedor de tarjetas*/
+.cards-container{
+    width: 1000px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    border-radius: 15px;
+    scrollbar-width: none;
+    user-select: none;
+    overflow-y: auto;
+    touch-action: pan-y;
+    gap: 50px;
+    margin-left: 0;
+    padding: 0;
+}
+
+/*tarjeta testimonios*/
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 300px;
+    height: 450px;
+    padding: 1rem 1rem;
+    border: 1px solid var(--azul);
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--blanco);
+}
+
+/*imagen usuario*/
+.card img{
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 30%;
+}
+
+/*comillas*/
+.card h4{
+    font-family: "Fleur De Leah", cursive;
+    font-size: clamp(3rem, 1.8547rem + 1.7877vw, 4rem);
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--negro);
+}
+
+/*testimonio*/
+.card p{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.8855rem + 0.1788vw, 1.1rem);
+}
+
+/*nombre*/
+.card h3{
+    font-family: "Imperial Script", cursive;
+    font-size: clamp(1.7rem, 0.7838rem + 1.4302vw, 2.5rem);
+}
+
+/*contenedor de flechas*/
+.contenedor-flechas{
+    margin-right: 0.3rem;
+    position: absolute;
+    max-width: 1110px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow-y: auto;
+    touch-action: pan-y;
+    bottom: 35%;
+}
+
+/*flecha*/
+.contenedor-flechas img{
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+}
+
+/*contenedor de caracteristicas*/
+.items-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+/*caracteristica*/
+.items-container .item{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 380px;
+}
+
+/*icono*/
+.items-container .item img{
+    width: 90px;
+    height: auto;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+/*titulo*/
+.items-container .item h3{
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 0.8709rem + 0.3575vw, 1.3rem);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+/*descripción*/
+.items-container .item p{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.7709rem + 0.3575vw, 1.2rem);
+    font-weight: 500;
+    text-align: center;
+    color: var(--negro);
+}
+
+/*botón cta*/
+.quiensoy a{
+    font-family: var(--text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem 1.3rem;
+    background: var(--azul);
+    border-radius: 35px;
+    border: 2px solid var(--blanco);
+    margin-top: 5rem;
+}
+
+/*diseño adaptable para dispositivos moviles*/
+@media (max-width: 1440px) {
+
+    .quiensoy .content h2{
+        max-width: 950px;
+    }
+
+    .cards-container{
+        width: 650px;
+    }
+    
+    .contenedor-flechas{
+        max-width: 750px;
+    }
+
+    .items-container{
+        gap: 1rem;
+    }
+
+    .items-container .item{
+        max-width: 300px;
+    }
+
+    .items-container .item img{
+        width: 70px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .quiensoy .content h4{
+        font-size: 1.1rem;
+    }
+
+    .cards-container{
+        width: 300px;
+    }
+
+    .contenedor-flechas{
+        max-width: 400px;
+    }
+
+    .items-container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .quiensoy a{
+        font-size: 1rem;
+    }
+
+    .items-container .item h3{
+    font-size: 1.3rem;
+}
+}

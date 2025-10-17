@@ -1,0 +1,29 @@
+:root {
+
+  /*variables para fuentes*/
+  --title: "Roboto Serif", serif;
+  --text: "Montserrat", sans-serif;
+
+  /*varibles para colores*/
+  --negro: #272727;
+  --blanco: #fafafa;
+  --azul: #346C8E;
+  --gris: #7e7c7c;  
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #E8EEF3;
+  color: var(--negro)
+}
+
+
+
+

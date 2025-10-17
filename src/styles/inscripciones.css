@@ -1,0 +1,258 @@
+/*contendor del componente*/
+.inscripciones{
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5rem;
+}
+
+/*contendor de titulo, subtitulo y redes sociales*/
+.inscripciones .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*nombre de la sección*/
+.inscripciones .content h5{
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 450;
+    color: var(--gris);
+    border: 1px solid var(--gris);
+    border-radius: 45px;
+    padding: 0.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*titulo*/
+.inscripciones .content h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, 0.2821rem + 2.6816vw, 3.5rem);
+    font-weight: 500;
+    text-align: center;
+    max-width: 1300px;
+}
+
+/*subtitulo*/
+.inscripciones .content p{
+    font-family: var(--text);
+    font-size: clamp(1.2rem, 0.8564rem + 0.5363vw, 1.5rem);
+    font-weight: 500;
+    text-align: left;
+    max-width: 680px;
+}
+
+/*contendor de iconos a redes sociales*/
+.inscripciones .socials{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*icono*/
+.inscripciones .socials img{
+    width: 65px;
+    height: auto;
+}
+
+/*formulario*/
+.inscripciones form{
+    width: fit-content;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--blanco);
+    padding: 2.5rem;
+    border-radius: 25px;
+}
+
+/*separador de inputs*/
+.inscripciones form fieldset{
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/*contenedor de label e inputs*/
+.inscripciones form fieldset div{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 0.5rem;
+}
+
+.inscripciones form fieldset div label{
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.inscripciones form fieldset div input{
+    padding: 0.7rem;
+    border: 1px solid var(--gris);
+    border-radius: 5px;
+    font-family: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*elimina interfaz para subir o bajar contador de números*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*contenedor de selección*/
+.inscripciones form .seleccion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.inscripciones form .seleccion label{
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.inscripciones .seleccion select{
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--gris);
+    border-radius: 5px;
+    font-family: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*contendor de mensaje*/
+.inscripciones .comentario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.inscripciones .comentario label{
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.inscripciones .comentario textarea{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 0.7rem;
+    border: 1px solid var(--gris);
+    border-radius: 5px;
+    font-family: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*botón para enviar el formulario*/
+.inscripciones button{
+    width: 100%;
+    font-family: var(--text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.7rem 1.3rem;
+    background: var(--azul);
+    border-radius: 35px;
+    border: 2px solid var(--blanco);
+    cursor: pointer;
+}
+
+/*diseño adaptable para dispositivos moviles*/
+@media (max-width: 1440px){
+    .inscripciones{
+        padding: 3rem;
+    }
+
+    .inscripciones form fieldset div{
+        width: 250px;
+    }
+
+    .inscripciones .socials img{
+        width: 60px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1150px){
+
+    .inscripciones{
+        padding: 3rem 2rem;
+    }
+
+    .inscripciones form fieldset div{
+        width: 220px;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .inscripciones{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 3rem 1rem;
+    }
+
+    .inscripciones .content{
+        max-width: 680px;
+    }
+
+    .inscripciones .socials img{
+        width: 50px;
+        height: auto;
+    }
+
+    .inscripciones form{
+        height: 700px;
+        width: 680px;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .inscripciones form fieldset{
+        flex-direction: column;
+    }
+
+    .inscripciones form fieldset div{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+
+    .inscripciones form{
+        height: 700px;
+        width: 100%;
+    }
+}

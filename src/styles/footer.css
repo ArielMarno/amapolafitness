@@ -1,0 +1,206 @@
+/*contenedor del componente*/
+.footer{
+    min-height: 60svh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--blanco);
+    padding: 1rem 5rem;
+}
+
+/*contenedor de logo y texto*/
+.footer .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+    padding-left: 5rem;
+}
+
+/*logo*/
+.footer .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer .logo img{
+    width: 350px;
+    height: auto;
+}
+
+/*texto*/
+.footer .logo h4{
+    font-family: var(--text);
+    font-size: clamp(1.3rem, 1.0709rem + 0.3575vw, 1.5rem);
+    font-weight: 500;
+    color: var(--gris);
+    max-width: 500px;
+}
+
+/*ocultar contenedor con links a redes sociales para dispositivos moviles*/
+.footer .socials-rsp{
+    display: none;
+}
+
+/*contenedor de copyright y enlace a la pagina web de Sunflower*/
+.footer .copy{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer .copy p, .footer .copy h5{
+    font-family: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--negro);
+}
+
+.footer .copy h5 a{ 
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 600;
+}
+
+/*contenedor de navegador inferior y links de escritorio a la redes sociales*/
+.footer .aside{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10rem;
+    padding-right: 5rem;
+}
+
+.footer .secciones, .footer .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/*titulo de lista*/
+.footer .secciones h3, .footer .socials h3{
+    font-family: var(--title);
+    font-size: clamp(1.2rem, 0.8564rem + 0.5363vw, 1.5rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/*links*/
+.footer .secciones a, .footer .socials a{
+    text-decoration: none;
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 0.9855rem + 0.1788vw, 1.2rem);
+    font-weight: 500;
+    color: var(--negro);
+}
+
+/*diseño adaptable para dispositivos moviles*/
+@media (max-width: 1440px){
+    
+    .footer{
+        padding: 1rem 3rem;
+    }
+
+    .footer .content, .footer .aside{
+        padding: 0;
+    }
+
+    .footer .aside{
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        padding-top: 5rem;
+    }
+
+    .footer .logo{
+        align-items: center;
+    }
+
+    .footer .logo img{
+        width: 300px;
+        height: auto;
+    }
+
+    .footer .logo h4{
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .footer .content{
+        align-items: center;
+    }
+
+    .footer .aside{
+        display: none;
+    }
+
+    .footer .socials-rsp{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        gap: 0.7rem;
+    }
+
+    .footer .socials-rsp a{
+        text-decoration: none;
+        font-family: var(--text);
+        font-size: 1.1rem;
+        font-weight: 550;
+        color: var(--azul);
+    }
+
+    .footer .copy{
+        align-items: center;
+    }
+
+    .footer .copy p, .footer .copy h5{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    .footer{
+        min-height: fit-content;
+        padding: 3rem 1rem;
+    }
+
+    .footer .content{
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    .footer .logo img{
+        width: 250px;
+        height: auto;
+    }
+
+    .footer .socials-rsp a{
+        font-size: 1.2rem;
+    }
+}
